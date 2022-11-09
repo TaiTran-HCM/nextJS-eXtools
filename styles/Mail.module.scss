@@ -1,0 +1,57 @@
+$box-with : 250px;
+$box-height : 50px;
+$box-margin-left : 25px;
+$box-margin-right : 2px;
+$box-margin-bottom : 2px;
+$box-border-radius : 8px;
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    align-items: center;
+}
+
+@mixin box {
+    width: $box-with;
+    height: $box-height;
+    /* Auto layout */
+    border-radius: $box-border-radius;
+}
+
+.box_active {
+    @include box();
+    
+    background: #006AD4;
+    margin-bottom: 35px;
+}
+
+.box_active .box_items {
+    @include row();
+    @include center();
+
+    width: $box-with;
+    height: $box-height;
+    justify-content: space-between;
+}
+
+.box_items .left_box {
+    @include row();
+    @include center();
+    margin-left: 10px;
+}
+
+.left_box .text {
+    margin-left: 10px;
+}
+
+.box_items .show_more {
+    margin-right: 10px;
+}
