@@ -1,5 +1,4 @@
-import boxStyles from '../../styles/Mail.module.scss'
-import { boxData } from './box_data'
+import boxStyles from '../../styles/Box.module.scss'
 import status from '../status'
 
 export default function Box(props) {
@@ -24,7 +23,7 @@ export default function Box(props) {
                         </svg>
                     </div>
                     <div className={boxStyles.text}>
-                        {text}
+                        {props.name}
                     </div>
                 </div>
                 <div className={boxStyles.show_more}>

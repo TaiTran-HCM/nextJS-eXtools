@@ -1,0 +1,9 @@
+@import './Flex.module.scss';
+
+.left_side {
+    @include column();
+    
+    box-sizing: border-box;
+    background: #262626;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
