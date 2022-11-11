@@ -33,7 +33,20 @@ $box-border-radius : 8px;
     margin-bottom: 35px;
 }
 
-.box_active .box_items {
+.box_seclect {
+    @include box();
+    
+    background: #353739;
+    margin-bottom: 35px;
+}
+
+.box_default {
+    @include box();
+    
+    margin-bottom: 35px;
+}
+
+.box_items {
     @include row();
     @include center();
 

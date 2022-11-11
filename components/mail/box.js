@@ -1,9 +1,21 @@
 import boxStyles from '../../styles/Mail.module.scss'
+import { boxData } from './box_data'
+import status from '../status'
 
 export default function Box(props) {
-    let text = "Gmail Text"
+    let text = "Gmail"
+    var boxStatus = boxStyles.box_default
+
+    if (props.status !== status.box.DEFAULT && props.status !== undefined) {
+        if (props.status == status.box.ACTIVE) {
+            boxStatus = boxStyles.box_active
+        } else {
+            boxStatus = boxStyles.box_select
+        }
+    }
+    
     return (
-        <div className={boxStyles.box_active}>
+        <div className={boxStatus}>
             <div className={boxStyles.box_items}>
                 <div className={boxStyles.left_box}>
                     <div className="icon-gmail">
