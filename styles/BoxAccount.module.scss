@@ -1,0 +1,19 @@
+@import "./Flex.module.scss";
+@import "./Box.module.scss";
+
+.account {
+    @include row();
+    @include center();
+    @include box();
+
+    margin-top: auto;
+    margin-bottom: 32px;
+}
+
+.avatar {
+    margin-right: 8px;
+}
+
+.icon_switch_account {
+    margin-left: auto;
+}

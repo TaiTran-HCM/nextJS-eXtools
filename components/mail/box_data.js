@@ -30,5 +30,22 @@ export const boxData = {
             Name : "Draft",
             Status : status.box.DEFAULT
         },
+    ],
+    dataFolder : [
+        {
+            Name : "Eduplax",
+            Items : "12",
+            Color : "#12A33A"
+        },
+        {
+            Name : "Eduplax",
+            Items : "12",
+            Color : "#FFFFFF"
+        },
+        {
+            Name : "Eduplax",
+            Items : "12",
+            Color : "#FFFF11"
+        },
     ]
 }

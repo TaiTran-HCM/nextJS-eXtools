@@ -1,6 +1,6 @@
 import styles from '../../styles/BoxLetter.module.scss'
 
-export default function Box(props) {
+export default function BoxLetter(props) {
     return (
         <div className={styles.letter_item_select}>
             <div className={styles.letter_head}>
