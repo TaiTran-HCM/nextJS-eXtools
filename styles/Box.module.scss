@@ -1,3 +1,5 @@
+@import "./Flex.module.scss";
+
 $box-with : 250px;
 $box-height : 50px;
 $box-margin-left : 25px;
@@ -5,25 +7,12 @@ $box-margin-right : 2px;
 $box-margin-bottom : 2px;
 $box-border-radius : 8px;
 
-@mixin row {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin center {
-    align-items: center;
-}
-
 @mixin box {
     width: $box-with;
     height: $box-height;
     /* Auto layout */
     border-radius: $box-border-radius;
+    margin-bottom: 2px;
 }
 
 .box_active {
@@ -33,17 +22,19 @@ $box-border-radius : 8px;
     margin-bottom: 35px;
 }
 
-.box_seclect {
+.box_select {
     @include box();
     
     background: #353739;
-    margin-bottom: 35px;
 }
 
 .box_default {
     @include box();
-    
-    margin-bottom: 35px;
+}
+
+.box_default:hover {
+    cursor: pointer;
+    background-color: #353739;
 }
 
 .box_items {
