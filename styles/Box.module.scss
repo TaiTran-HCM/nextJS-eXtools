@@ -13,11 +13,15 @@ $box-border-radius : 8px;
     /* Auto layout */
     border-radius: $box-border-radius;
     margin-bottom: 2px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #7F7F7F;
 }
 
 .box_active {
     @include box();
     
+    color: #F8FAFC;
     background: #006AD4;
     margin-bottom: 35px;
 }
@@ -25,6 +29,7 @@ $box-border-radius : 8px;
 .box_select {
     @include box();
     
+    color: #F8FAFC;
     background: #353739;
 }
 
@@ -35,15 +40,24 @@ $box-border-radius : 8px;
 .box_default:hover {
     cursor: pointer;
     background-color: #353739;
+    color: #F8FAFC;
 }
+
+.box_default:last-child {
+    margin-bottom: 24px;
+}
+
+// .box_default, .box_select, .box_active {
+//     margin-left: 25px;
+//     margin-right: 25px;
+// }
 
 .box_items {
     @include row();
     @include center();
 
-    width: $box-with;
-    height: $box-height;
     justify-content: space-between;
+    margin: 12px 10px 12px 10px
 }
 
 .box_items .left_box {
@@ -56,6 +70,10 @@ $box-border-radius : 8px;
     margin-left: 10px;
 }
 
-.box_items .show_more {
-    margin-right: 10px;
+// .box_items .show_more {
+//     margin-right: 10px;
+// }
+
+.items {
+    margin-left: auto;
 }
