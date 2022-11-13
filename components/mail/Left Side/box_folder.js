@@ -1,6 +1,6 @@
-import styles from "../../styles/BoxFolder.module.scss"
-import scrollStyles from "../../styles/Scroll.module.scss"
-import { boxData } from "./box_data"
+import styles from "../../../styles/BoxFolder.module.scss"
+import scrollStyles from "../../../styles/Scroll.module.scss"
+import { boxData } from "../../box_data"
 
 export default function BoxFolder(props) {
     const dataFolder = boxData.dataFolder

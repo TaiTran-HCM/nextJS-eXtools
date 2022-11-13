@@ -1,23 +1,35 @@
 @import "Flex.module.scss";
+
 @mixin letter_item {
     margin-bottom: 2px;
-    border: 1px solid #1F1F1F;
+    // border: 1px solid #1F1F1F;
 }
 
 @mixin select {
     background: #353739;
-    border: 1px solid rgba(127, 127, 127, 0.2);
-    border-radius: 8px;
 }
 
-.letter_item_select {
-    @include letter_item();
+.letter_list {
+    margin: 16px 16px 0px 16px;
+}
+
+.letter_item_select:hover {
     @include select();
+}
+
+.letter_item_select:not(.letter_item_select:last-child) {
+    border-bottom: 1px solid rgba(248, 250, 252, 0.2);
+}
+
+.letter_item_select:first-child {
+    border-top: 1px solid rgba(248, 250, 252, 0.2);
 }
 
 .letter_head {
     @include center();
     @include row();
+
+    margin-bottom: 2px;
 }
 
 .letter_avatar {
@@ -26,6 +38,7 @@
 
 .letter_box {
     margin: 24px 24px 24px 16px;
+    width: 100%
 }
 
 .letter_box_header {
@@ -59,10 +72,6 @@
 .letter_box_status {
     // display: none;
     margin-left: auto;
-}
-
-.letter_box_footer {
-
 }
 
 .letter_box_description {

@@ -1,0 +1,11 @@
+@import "./Flex.module.scss";
+
+.center_side {
+    @include column();
+
+    box-sizing: border-box;
+    background: #1F1F1F;
+    border-left: 1px solid rgba(248, 250, 252, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    width: 30%;
+}

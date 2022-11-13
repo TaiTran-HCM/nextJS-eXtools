@@ -4,6 +4,12 @@ const boxStatus = {
     DEFAULT : "DEFAULT"
 }
 
+const letterStatus = {
+    READ : "read",
+    UNREAD : "unread"
+}
+
 module.exports = {
-    box : boxStatus
+    box : boxStatus,
+    letter: letterStatus
 }
