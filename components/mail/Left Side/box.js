@@ -1,5 +1,5 @@
-import boxStyles from '../../styles/Box.module.scss'
-import status from '../status'
+import boxStyles from '../../../styles/Box.module.scss'
+import status from '../../status'
 
 export default function Box(props) {
     let text = "Gmail"

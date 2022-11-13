@@ -1,4 +1,4 @@
-import styles from "../../styles/BoxAccount.module.scss"
+import styles from "../../../styles/BoxAccount.module.scss"
 
 export default function BoxAccount(props) {
     return (

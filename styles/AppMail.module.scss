@@ -1,0 +1,7 @@
+@import "./Flex.module.scss";
+
+.main {
+    @include row();
+    
+    height: 100%;
+}
