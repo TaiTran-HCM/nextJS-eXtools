@@ -1,6 +1,7 @@
 @import "./Box.module.scss";
 @import "./Flex.module.scss";
 @import "./Scroll.module.scss";
+@import "./Color.module.scss";
 
 
 .main_folder {
@@ -11,9 +12,9 @@
     @include row();
     @include center();
     @include box();
+    @include main_text();
 
     margin-top: 24px;
-    color: #F8FAFC;
 }
 
 .folder_list {
@@ -65,7 +66,7 @@
     @include box();
     @include row();
     @include center();
+    @include main_text();
 
     width: 230px;
-    color: #F8FAFC;
 }

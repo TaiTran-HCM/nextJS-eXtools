@@ -1,0 +1,117 @@
+@import "./Flex.module.scss";
+@import "./Box.module.scss";
+@import "./Color.module.scss";
+
+.right_side {
+    @include column();
+
+    box-sizing: border-box;
+    background: #1F1F1F;
+    border-left: 1px solid rgba(248, 250, 252, 0.2);
+}
+
+@mixin right_side_row_center {
+    @include row();
+    @include center();
+}
+
+.right_side_header {
+    border-bottom: 1px solid rgba(248, 250, 252, 0.2);
+}
+
+.right_side_header_list_item {
+    @include right_side_row_center();
+
+    margin: 27px 35px 25px 31px;
+    justify-content: space-between;
+}
+
+.right_side_header_group {
+    @include right_side_row_center();
+}
+
+.stick {
+    width: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: 1px solid rgba(248, 250, 252, 0.2);
+    border-bottom: none;
+    transform: rotate(90deg);
+}
+
+.right_side_header_move_letter .text {
+    @include sub_text();
+
+    margin-left: 8px;
+}
+
+.right_side_body {
+    margin: 0px 0px 0px 31px;
+    height: 100%;
+}
+
+.right_side_body_top {
+    @include right_side_row_center();
+
+    margin: 31px 10px 0px 0px;
+}
+
+.avatar {
+    margin-right: 16px;
+}
+
+.right_side_body_top_text {
+    width: 100%;
+}
+
+.right_side_body_top_text_1 {
+    @include right_side_row_center();
+
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.right_side_body_top_text_2 {
+    @include row();
+    justify-content: space-between;
+}
+
+.right_side_body_top_text_2_2 {
+    @include sub_text();
+}
+
+.right_side_body_top_text_2_2 .text {
+    @include main_text();
+}
+
+.right_side_body_top_name {
+    font-size: 18px;
+}
+
+.right_side_body_top_time {
+    @include sub_text();
+
+    font-size: 14px;
+}
+
+.right_side_body_letter {
+    margin-right: 10px;
+    margin-top: 32px;
+}
+
+.right_side_body_letter .title {
+    margin-bottom: 32px;
+    font-size: 28px;
+}
+
+.right_side_body_letter .paragraph {
+    @include sub_text();
+
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.right_side_body_letter .image {
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
