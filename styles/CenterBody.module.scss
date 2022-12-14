@@ -1,4 +1,5 @@
 @import "Flex.module.scss";
+@import "./Color.module.scss";
 
 @mixin letter_item {
     margin-bottom: 2px;
@@ -15,15 +16,24 @@
 
 .letter_item_select:hover {
     @include select();
+
+    cursor: pointer;
+    background: #353739;
+    border: 1px solid rgba(127, 127, 127, 0.2);
+    border-radius: 8px;
 }
 
-.letter_item_select:not(.letter_item_select:last-child) {
-    border-bottom: 1px solid rgba(248, 250, 252, 0.2);
+.letter_item_select{
+    // border-bottom: 1px solid rgba(248, 250, 252, 0.2);
+    background: #1F1F1F;
+    border: 1px solid #1F1F1F;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
 
-.letter_item_select:first-child {
-    border-top: 1px solid rgba(248, 250, 252, 0.2);
-}
+// .letter_item_select:first-child {
+//     border-top: 1px solid rgba(248, 250, 252, 0.2);
+// }
 
 .letter_head {
     @include center();
@@ -53,9 +63,10 @@
 }
 
 .letter_box_sending_time {
+    @include sub_text();
+    
     margin-left: auto;
     font-size: 12px;
-    color: #7F7F7F;
 }
 
 .letter_box_body {
@@ -75,7 +86,8 @@
 }
 
 .letter_box_description {
-    color: #F8FAFC;
+    @include main_text();
+
     font-size: 12px;
     margin-bottom: 12px;
 }
@@ -91,7 +103,7 @@
     @include row();
     @include center();
 
-    background: #1F1F1F;
+    background-color: #353739;
     width: 105px;
     height: 26px;
     border-radius: 4px;
@@ -99,11 +111,16 @@
 }
 
 .letter_box_file_collap {
-    background: #1F1F1F;
+    background-color: #353739;
     width: auto;
     height: 26px;
     border-radius: 4px;
     margin-right: 10px;
+}
+
+.letter_item_select:hover .letter_box_file_collap,
+.letter_item_select:hover .letter_box_file_default {
+    background-color: #1F1F1F;
 }
 
 .letter_box_file_icon {

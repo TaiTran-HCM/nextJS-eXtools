@@ -1,4 +1,5 @@
 @import "./Flex.module.scss";
+@import "./Color.module.scss";
 
 $box-with : 250px;
 $box-height : 50px;
@@ -8,6 +9,8 @@ $box-margin-bottom : 2px;
 $box-border-radius : 8px;
 
 @mixin box {
+    @include sub_text();
+
     width: $box-with;
     height: $box-height;
     /* Auto layout */
@@ -15,21 +18,20 @@ $box-border-radius : 8px;
     margin-bottom: 2px;
     margin-left: 25px;
     margin-right: 25px;
-    color: #7F7F7F;
 }
 
 .box_active {
     @include box();
+    @include main_text();
     
-    color: #F8FAFC;
     background: #006AD4;
     margin-bottom: 35px;
 }
 
 .box_select {
     @include box();
-    
-    color: #F8FAFC;
+    @include main_text();
+
     background: #353739;
 }
 
@@ -38,9 +40,10 @@ $box-border-radius : 8px;
 }
 
 .box_default:hover {
+    @include main_text();
+
     cursor: pointer;
     background-color: #353739;
-    color: #F8FAFC;
 }
 
 .box_default:last-child {
