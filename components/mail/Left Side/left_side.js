@@ -4,11 +4,12 @@ import BoxAccount from "./box_account"
 import { boxData } from "../../box_data";
 import styles from "../../../styles/LeftSide.module.scss"
 
-export default function LeftSide() {
+export default function LeftSide(props) {
     const jsonData = boxData.data
     const listBox = jsonData.map((itemBox) =>
-        <Box status={itemBox.Status} name={itemBox.Name} />
+        <Box status={itemBox.Status} name={itemBox.Name} items={props.data.results.filter(item => item.type === itemBox.Type).length}/>
     )
+
     return (
         <div className={styles.left_side}>
             <div className={styles.left_side_header}>{listBox}</div>

@@ -4,31 +4,38 @@ export const boxData = {
     data : [
         {
             Name : "Gmail",
-            Status : status.box.ACTIVE
+            Status : status.box.ACTIVE,
+            Type : 0
         },
         {
             Name : "Inbox",
-            Status : status.box.SELECT
+            Status : status.box.SELECT,
+            Type : 1
         },
         {
             Name : "Sent",
-            Status : status.box.DEFAULT
+            Status : status.box.DEFAULT,
+            Type : 2
         },
         {
             Name : "Starred",
-            Status : status.box.DEFAULT
+            Status : status.box.DEFAULT,
+            Type : 3
         },
         {
             Name : "Archive",
-            Status : status.box.DEFAULT
+            Status : status.box.DEFAULT,
+            Type : 4
         },
         {
             Name : "Delete",
-            Status : status.box.DEFAULT
+            Status : status.box.DEFAULT,
+            Type : 5
         },
         {
             Name : "Draft",
-            Status : status.box.DEFAULT
+            Status : status.box.DEFAULT,
+            Type : 6
         },
     ],
     dataFolder : [

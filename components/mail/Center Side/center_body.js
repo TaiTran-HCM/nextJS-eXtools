@@ -4,7 +4,7 @@ import { boxData } from "../../box_data"
 import status from '../../status'
 
 export default function CenterBody(props) {
-    const listLetter = boxData.dataLetter
+    const listLetter = props.data
     const letters = listLetter.map((letter) => (
         <div className={styles.letter_item_select}>
             <div className={styles.letter_head}>
@@ -13,11 +13,11 @@ export default function CenterBody(props) {
                 </div>
                 <div className={styles.letter_box}>
                     <div className={styles.letter_box_header}>
-                        <p className={styles.letter_box_username}>{letter.SenterName}</p>
-                        <p className={styles.letter_box_sending_time}>20 JUNE</p>
+                        <p className={styles.letter_box_username}>{letter.from}</p>
+                        <p className={styles.letter_box_sending_time}>{letter.date}</p>
                     </div>
                     <div className={styles.letter_box_body}>
-                        <p className={styles.letter_box_title}>{letter.Title}</p>
+                        <p className={styles.letter_box_title}>{letter.subject}</p>
                         <div className={styles.letter_box_status}>
                             <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="4" cy="4.5" r="4" fill="#006AD4"></circle>
@@ -26,7 +26,7 @@ export default function CenterBody(props) {
                     </div>
                     <div className={styles.letter_box_footer}>
                         <p className={styles.letter_box_description}>
-                            {letter.Description}
+                            {/* {letter.Description} */}
                         </p>
                         <div className={styles.letter_box_attach_files}>
                             <div className={styles.letter_box_file_default}>

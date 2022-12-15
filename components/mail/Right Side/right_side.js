@@ -1,7 +1,7 @@
 import styles from "../../../styles/RightSide.module.scss"
 import scroll from '../../../styles/Scroll.module.scss'
 
-export default function RightSide() {
+export default function RightSide(props) {
     return (
         <div className={styles.right_side}>
             <div className={styles.right_side_header}>

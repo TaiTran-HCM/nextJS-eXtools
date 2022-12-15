@@ -4,7 +4,7 @@ import status from '../../status'
 export default function Box(props) {
     let text = "Gmail"
     var boxStatus = boxStyles.box_default
-    var boxLeft = <p className={boxStyles.items}>200</p>
+    var boxLeft = <p className={boxStyles.items}>{props.items}</p>
 
     if (props.status !== status.box.DEFAULT && props.status !== undefined) {
         if (props.status == status.box.ACTIVE) {
