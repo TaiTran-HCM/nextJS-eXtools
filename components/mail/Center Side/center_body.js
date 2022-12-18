@@ -1,12 +1,17 @@
+import { useState } from 'react'
 import styles from '../../../styles/CenterBody.module.scss'
 import scroll from '../../../styles/Scroll.module.scss'
 import { boxData } from "../../box_data"
 import status from '../../status'
 
 export default function CenterBody(props) {
+    const [prevId, setaPrevId] = useState(null)
     const listLetter = props.data
     const letters = listLetter.map((letter) => (
-        <div className={styles.letter_item_select}>
+        <div className={styles.letter_item_select} id={`eXMail_${letter.id}`} onClick={() => {
+            itemClick(letter.id, prevId)
+            setaPrevId(letter.id)
+        }} key={letter.id}>
             <div className={styles.letter_head}>
                 <div className={styles.letter_avatar}>
                     <img src="./semantic-ui/assets/images/letter-avatar.svg" alt="" />
@@ -91,4 +96,15 @@ export default function CenterBody(props) {
             </div>
         </div>
     )
+};
+
+function itemClick(id) {
+    const activeItems = document.getElementsByClassName(styles.letter_item_active);
+    console.log(activeItems)
+    if (activeItems.length > 0) {
+        console.log("Deactive items")
+        activeItems[0].className = styles.letter_item_select
+    };
+    const item = document.getElementById(`eXMail_${id}`);
+    item.className = styles.letter_item_active
 }
