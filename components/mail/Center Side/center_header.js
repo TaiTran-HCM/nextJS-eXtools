@@ -8,8 +8,8 @@ export default function CenterHeader(props) {
                     Inbox
                 </p>
                 <p className={styles.header_des_center_side}>
-                    <span className="eXtools_messages">2445 messages</span>,
-                    <span className="eXtools_messages_unread"> 2 Unread</span>
+                    <span className="eXtools_messages">{props.read} Read</span>,
+                    <span className="eXtools_messages_unread"> {props.un_read} Unread</span>
                 </p>
             </div>
             <div className={styles.header_2_center_side}>

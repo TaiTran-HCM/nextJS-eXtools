@@ -1,48 +1,19 @@
 import styles from "../../../styles/RightSide.module.scss"
 import scroll from '../../../styles/Scroll.module.scss'
 
-export default function RightSide() {
-    return (
-        <div className={styles.right_side}>
-            <div className={styles.right_side_header}>
-                <div className={styles.right_side_header_list_item}>
-                    <div className="eXtools_archive-letter">
-                        <img src="./semantic-ui/assets/images/archive.svg" alt="" />
-                    </div>
-                    <div className={styles.right_side_header_group}>
-                        <div className="eXtools_delete-letter">
-                            <img src="./semantic-ui/assets/images/trash.svg" alt="" />
-                        </div>
-                        <div className={styles.stick}></div>
-                        <div className="eXtools_unknow-item">
-                            <img src="./semantic-ui/assets/images/archive-x.svg" alt="" />
-                        </div>
-                    </div>
-                    <div className={styles.right_side_header_group}>
-                        <div className="reply-letter">
-                            <img src="./semantic-ui/assets/images/reply.svg" alt="" />
-                        </div>
-                        <div className={styles.stick}></div>
-                        <div className="reply-all-letter">
-                            <img src="./semantic-ui/assets/images/reply-all.svg" alt="" />
-                        </div>
-                        <div className={styles.stick}></div>
-                        <div className="forwar-letter">
-                            <img src="./semantic-ui/assets/images/forward.svg" alt="" />
-                        </div>
-                    </div>
-                    <div className={styles.right_side_header_move_letter}>
-                        <img src="./semantic-ui/assets/images/share.svg" alt="" />
-                        <span className={styles.text}>Move to..</span>
-                    </div>
-                    <div className="eXtools_letter-tips">
-                        <img src="./semantic-ui/assets/images/tips.svg" alt="" />
-                    </div>
-                    <div className="eXtools_letter-setting">
-                        <img src="./semantic-ui/assets/images/setting.svg" alt="" />
-                    </div>
+export default function RightSide(props) {
+    var render = null
+    console.log(props.mail_data)
+    if (props.mail_data === undefined) {
+        render = (
+            <div className={`${scroll.style_1} ${styles.right_side_body}`}>
+                <div className={`${styles.right_side_body_letter} ${scroll.style_1}`}>
+                    <p className={styles.paragraph}> Not Content</p>
                 </div>
             </div>
+        )
+    } else {
+        render = (
             <div className={`${scroll.style_1} ${styles.right_side_body}`}>
                 <div className={styles.right_side_body_top}>
                     <div className={styles.avatar}>
@@ -107,6 +78,50 @@ export default function RightSide() {
                     </p>
                 </div>
             </div>
+        )
+    }
+    return (
+        <div className={styles.right_side}>
+            <div className={styles.right_side_header}>
+                <div className={styles.right_side_header_list_item}>
+                    <div className="eXtools_archive-letter">
+                        <img src="./semantic-ui/assets/images/archive.svg" alt="" />
+                    </div>
+                    <div className={styles.right_side_header_group}>
+                        <div className="eXtools_delete-letter">
+                            <img src="./semantic-ui/assets/images/trash.svg" alt="" />
+                        </div>
+                        <div className={styles.stick}></div>
+                        <div className="eXtools_unknow-item">
+                            <img src="./semantic-ui/assets/images/archive-x.svg" alt="" />
+                        </div>
+                    </div>
+                    <div className={styles.right_side_header_group}>
+                        <div className="reply-letter">
+                            <img src="./semantic-ui/assets/images/reply.svg" alt="" />
+                        </div>
+                        <div className={styles.stick}></div>
+                        <div className="reply-all-letter">
+                            <img src="./semantic-ui/assets/images/reply-all.svg" alt="" />
+                        </div>
+                        <div className={styles.stick}></div>
+                        <div className="forwar-letter">
+                            <img src="./semantic-ui/assets/images/forward.svg" alt="" />
+                        </div>
+                    </div>
+                    <div className={styles.right_side_header_move_letter}>
+                        <img src="./semantic-ui/assets/images/share.svg" alt="" />
+                        <span className={styles.text}>Move to..</span>
+                    </div>
+                    <div className="eXtools_letter-tips">
+                        <img src="./semantic-ui/assets/images/tips.svg" alt="" />
+                    </div>
+                    <div className="eXtools_letter-setting">
+                        <img src="./semantic-ui/assets/images/setting.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+            {render}
         </div>
     )
 }
