@@ -12,7 +12,7 @@ export default function MailApp() {
   useEffect(() => {
     console.log("UseEffect")
     return () => {
-      axios.get("https://extools-api.glitch.me/mock/getMail").then(
+      axios.post("https://extools-api.glitch.me/mock/getMail").then(
         (response) => {
           setData(response.data)
         }
